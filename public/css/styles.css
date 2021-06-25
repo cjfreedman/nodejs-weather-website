@@ -1,0 +1,59 @@
+body {
+    color: #3333333;
+    font-family: arial;
+    max-width: 650px;
+    /* top/bottom   left/right */
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column; 
+    /* 100% of the viewport height */
+    min-height: 100vh;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+/* Targets links just inside the header, not the entire site */
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.main-content {
+    /* should take up all leftover space */
+    flex-grow: 1;
+}
+
+.portrait {
+    width: 150px;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0px;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
