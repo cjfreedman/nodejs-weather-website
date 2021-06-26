@@ -22,11 +22,14 @@ weatherForm.addEventListener("submit", (event) => {
     // Fetch API is not part of javascript; it is a browser-based api.
     // But it is not accessible in Node.js
 
-    // sends off an asynchronous i/o operation like calling request in node.js
-    // that means you don't get the data right away, you provide a function
-    // that can access the data in the future when the data is available
+    // 'fetch' sends off an asynchronous i/o operation like calling request in 
+    // node.js.  that means you don't get the data right away, you provide a 
+    // function that can access the data in the future when the data is 
+    // available
 
-    fetch("http://localhost:3000/weather?city=" + location)
+    // when running locally, you want to run on localhost; when running via
+    // Heroku, you want to run from the url provided by Heroku
+    fetch("/weather?city=" + location)
     .then((response) => {
         response.json().then((data) => {
             if (data.error) {

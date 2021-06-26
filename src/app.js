@@ -12,6 +12,9 @@ console.log(path.join(__dirname, '../public'));
 // call the function to create the express application
 const app = express();
 
+// Default port is 3000.  Heroku will provide a port in an environment variable
+const port = process.env.PORT || 3000;
+
 // Define path for express config
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewPath = path.join(__dirname, '../templates/views');
@@ -120,6 +123,6 @@ app.get('*', (request, response) => {
 
 // start the server; common development port is 3000; callback function is
 // called when the server has started
-app.listen(3000, () => {
-     console.log('server is up on port 3000');
+app.listen(port, () => {
+     console.log('server is up on port ' + port);
 });
