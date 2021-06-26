@@ -17,7 +17,7 @@ const forecast = (latitude, longitude, callback) => {
                " degrees out.  It feels like " + weather.feelslike + 
                " degrees.  There is a " + weather.precip + 
                "% chance of rain.  The humidity is " +
-               weather.humidity + "%."); 
+               weather.humidity + "%. "); 
          } 
      } );
 };
